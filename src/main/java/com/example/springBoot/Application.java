@@ -1,13 +1,16 @@
 package com.example.springBoot;
 
+import com.example.springBoot.service.StartService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		ApplicationContext context = SpringApplication.run(Application.class, args);
+		StartService startService = (StartService) context.getBean("startService");
+		startService.start();
 	}
-
 }
