@@ -11,7 +11,7 @@ public class Test2Impl implements Test {
   @Value("${d}")
   private String d;
 
-  public void m() {
-    System.out.println(d);
+  public String m() {
+    return d;
   }
 }

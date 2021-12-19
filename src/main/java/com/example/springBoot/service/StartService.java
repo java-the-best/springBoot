@@ -15,6 +15,7 @@ public class StartService {
 //  }
 
   public void start() {
-    test.m();
+    String s = test.m();
+    System.out.println(s);
   }
 }
